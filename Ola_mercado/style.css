@@ -3,7 +3,7 @@ input.ng-invalid {
 }
 
 input.ng-valid {
-    background-color: #8bca85;
+    background-color: #e2e1e1;
 }
 
 .header {
@@ -13,6 +13,12 @@ input.ng-valid {
     background-color: #BDBDBD;
 }
 
+/*
+.footer {
+    background-color: #BDBDBD;
+    text-align: center;
+}
+*/
 .leftMenu {
     background-color: #8a8a8a;
     width: 110px;

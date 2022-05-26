@@ -1,4 +1,4 @@
-var app = angular.module("MyApp",["ngRoute", 'ngResource'])
+var app = angular.module("MyApp", ["ngRoute"])
     .config(function ($routeProvider) {
         $routeProvider
             .when("/home", {
@@ -9,6 +9,10 @@ var app = angular.module("MyApp",["ngRoute", 'ngResource'])
                 templateUrl: "Templates/compra.html",
                 controller: "CompraController"
             })
+            .when("/cadastro", {
+                templateUrl: "Templates/cadastro.html",
+                controller: "CadastroController"
+            })
             .when("/tempo", {
                 templateUrl: "Templates/tempo.html",
                 controller: "TempoController"
@@ -17,5 +21,6 @@ var app = angular.module("MyApp",["ngRoute", 'ngResource'])
                 templateUrl: 'Templates/forecast.html',
                 controller: 'ForecastController'
             })
-            $routeProvider.otherwise({redirectTo: "/home"});
+            $routeProvider.otherwise({ redirectTo: "/home" });
+
     });

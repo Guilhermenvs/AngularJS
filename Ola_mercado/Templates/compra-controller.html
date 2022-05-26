@@ -1,0 +1,27 @@
+<div ng-controller="CompraController">
+  <h1>Monte sua Lista de Compras</h1>
+  <ul>
+    <li ng-repeat="x in products">
+      {{x}}<span ng-click="removeItem($index)">&times;</span>
+    </li>
+  </ul>
+  <input pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" ng-model="addMe" required>
+  <button ng-click="addItem()">Adicionar</button>
+  <p>{{errortext}}</p>
+</div>
+<br>
+<ol>
+  <li>
+    <p>Para exluir o produto, basta clicar no X ao lado do item</p>
+  </li>
+  <li>
+    <p>Ao adicionar números, ficará vermelho e o item não poderá ser adicionado</p>
+  </li>
+  <li>
+    <p>Tente adicionar o mesmo item duas vezes e você receberá uma mensagem de erro.</p>
+  </li>
+</ol>
+
+<div class="pagina">
+  <button ng-click="changeRoute('/home')">Principal</button>
+</div>

@@ -1,0 +1,38 @@
+<div ng-controller="CadastroController">
+    <div class="jumbotron">
+        <h2>{{app}}</h2>
+        <table ng-show="contatos.length > 0" class="table">
+			<tr>
+				<th></th>
+				<th>Nome</th>
+				<th>Telefone</th>
+				<th>Operadora</th>
+				<th></th>
+			</tr>
+			<tr ng-class="{'selecionado negrito': contato.selecionado}" ng-repeat="contato in contatos">
+				<td><input type="checkbox" ng-model="contato.selecionado"/></td>
+				<td>{{contato.nome}}</td>
+				<td>{{contato.telefone}}</td>
+				<td>{{contato.operadora.nome}}</td>
+				<td><div style="width: 20px; height: 20px;" ng-style="{'background-color': contato.cor}"></div></td>
+			</tr>
+		</table>
+        <hr/>
+		<input class="form-control" type="text" ng-model="contato.nome" placeholder="Nome"/>
+		<input class="form-control" type="text" ng-model="contato.telefone" placeholder="Telefone"/>
+		<select class="form-control" ng-model="contato.operadora" ng-options="operadora.nome for operadora in operadoras">
+			<option value="">Selecione uma operadora</option>
+		</select>
+		<button class="btn btn-primary btn-block" ng-click="adicionarContato(contato)" ng-disabled="!contato.nome || !contato.telefone">Adicionar Contato</button>
+		<button class="btn btn-danger btn-block" ng-click="apagarContatos(contatos)" ng-if="isContatoSelecionado(contatos)">Apagar Contatos</button>
+    </div>
+
+    <div class="pagina1">
+        <button ng-click="changeRoute('/compra')">Compras</button>
+    </div>
+
+    <div class="pagina2">
+        <button ng-click="changeRoute('/home')">Principal</button>
+    </div>
+
+</div>
