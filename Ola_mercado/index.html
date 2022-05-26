@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+
+<head>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="ui.css" type="text/css">
+  <link rel="stylesheet" href="bootstrap/bootstrap.css" type="text/css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-resource.min.js"></script>
+  
+  <script src="app-route.js"></script>
+  <script src="diretivas/ui-accordion.js"></script>
+  <script src="services/tempo-api.js"></script>
+  <script src="compra-controller.js"></script>
+  <script src="tempo-controller.js"></script>
+  <script src="forecast-controller.js"></script>
+  <script src="home-controller.js"></script>
+  
+</head>
+
+<body>
+  <table style="font-family: Arial, Helvetica, sans-serif">
+    <tr>
+      <td colspan="2" class="header">
+        <h1>
+          AngularJS
+        </h1>
+      </td>
+    </tr>
+    <tr>
+      <td class="leftMenu">
+        <button><a href="#!/tempo">Tempo</a></button>
+        <br>
+        <br>
+        <button><a href="#!/home">Principal</a></button>
+        <br>
+        <br>
+        <button><a href="#!/compra">Compras</a></button>
+      </td>
+      <td class="mainContent">
+        <ng-view></ng-view>
+      </td>
+    </tr>
+  </table>
+
+</body>
+
+</html>

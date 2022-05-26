@@ -1,0 +1,46 @@
+input.ng-invalid {
+    background-color: pink;
+}
+
+input.ng-valid {
+    background-color: #8bca85;
+}
+
+.header {
+    width: 800px;
+    height: 80px;
+    text-align: center;
+    background-color: #BDBDBD;
+}
+
+.leftMenu {
+    background-color: #8a8a8a;
+    width: 110px;
+    height: 110px;
+    overflow: auto;
+}
+
+.mainContent {
+    height: 500px;
+    background-color: #E6E6E6;
+    width: 650px;
+}
+
+a {
+    display: block;
+    padding: 5px
+}
+
+.pagina1 {
+    position: absolute;
+    top: 15%;
+    right: 1020px;
+    width: 200px;
+}
+
+.pagina2 {
+    position: absolute;
+    top: 15%;
+    right: 465px;
+    width: 200px;
+}
