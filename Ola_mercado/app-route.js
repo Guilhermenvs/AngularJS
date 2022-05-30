@@ -9,10 +9,6 @@ var app = angular.module("MyApp", ['ngRoute', 'ngResource'])
                 templateUrl: "Templates/compra.html",
                 controller: "CompraController"
             })
-            .when("/cadastro", {
-                templateUrl: "Templates/cadastro.html",
-                controller: "CadastroController"
-            })
             .when("/tempo", {
                 templateUrl: "Templates/tempo.html",
                 controller: "TempoController"

@@ -1,10 +1,13 @@
-Forecast for {{ city }}
+<p><b>Previsão para {{ city }}</b></p>
 
-<div ng-repeat="tempo in weatherResult.list | limitTo: 5">
+<div ng-repeat="tempo in weatherResult.list | limitTo: 1">
     <div class="row">
         <div class="col-md-12">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{ convertToDate(tempo.dt) | date: 'MMM d, y' }}</h3>
+            </div>
             <div class="panel panel-default">
-                Temperatura minima: {{ tempo.main.temp_min }}
+                Temperatura minima: {{ convertToFahrenheit(tempo.main.temp_min) }}
             </div>
         </div>
     </div>

@@ -1,5 +1,4 @@
-angular
-    .module("MyApp")
+angular.module("MyApp")
     .controller('ForecastController', function ($scope, $resource, cityService) {
 
         $scope.city = cityService.city;
@@ -12,4 +11,16 @@ angular
         }, function (data) {
             console.log('erro');
         });
+
+        $scope.convertToFahrenheit = function(degK) {
+        
+            return Math.round((1.8 * (degK - 273)) + 32);
+            
+        }
+
+        $scope.convertToDate = function(dt) { 
+      
+            return new Date(dt * 1000);
+            
+        };
     });

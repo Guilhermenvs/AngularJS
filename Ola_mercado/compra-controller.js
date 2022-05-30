@@ -1,7 +1,7 @@
 var app = angular.module("MyApp");
 
 app.controller("CompraController", function ($scope, $location) {
-        $scope.products = ["Leite", "Pão", "Queijo"];
+    $scope.products = ["Leite", "Queijo", "Pao"];
         $scope.addItem = function () {
 
             $scope.errortext = "";
