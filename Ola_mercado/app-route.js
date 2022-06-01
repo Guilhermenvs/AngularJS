@@ -17,6 +17,10 @@ var app = angular.module("MyApp", ['ngRoute', 'ngResource'])
                 templateUrl: 'Templates/forecast.html',
                 controller: 'ForecastController'
             })
+            .when('/catfact', {
+                templateUrl: 'Templates/catfact.html',
+                controller: 'CatfactController'
+            })
             $routeProvider.otherwise({ redirectTo: "/home" });
 
     });

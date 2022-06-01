@@ -1,0 +1,34 @@
+<div class="aplicacao">
+    <table>
+        <tr>
+            <th></th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Ano</th>
+        </tr>
+        <tr ng-class="{selecionado:carro.selecionado}" ng-repeat="carro in carros">
+            <td><input type="checkbox" ng-model="carro.selecionado" /></td>
+            <td>{{carro.marca}}</td>
+            <td>{{carro.modelo}}</td>
+            <td>{{carro.anoModelo}}</td>
+        </tr>
+    </table>
+    <hr />
+    <form name="carroForm">
+        <input type="text" ng-model="carro.marca" placeholder="Marca" ng-required="true" />
+        <input type="text" ng-model="carro.modelo" placeholder="Modelo" ng-required="true" />
+        <input type="text" ng-model="carro.anoModelo" placeholder="Ano Modelo" ng-pattern="/^\d{4}$/" id="ano" ng-required="true" />
+    </form>
+    <hr />
+    <button ng-click="adicionarCarro(carro)" ng-disabled="carroForm.$invalid">Adicionar Carro</button>
+    <button ng-click="apagarCarros(carros)" ng-disabled="isCarroSelecionado(carros)">Apagar Carro</button>
+    <hr />
+    <button ng-click="changeRoute('')">Voltar</button>
+</div>
+<hr>
+<div ui-alert ng-show="showAlert"></div>
+<div class="aplicacao">
+    <p ng-repeat="x in catFactService">
+        {{x.fact}}
+    </p>
+</div>
